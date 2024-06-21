@@ -1,0 +1,117 @@
+%!TeX TS-program=xelatex
+\documentclass{article}[10pt]
+% Paper size
+%\usepackage{blindtext}
+%\usepackage{lmodern}
+\usepackage[spanish]{babel}
+
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage{graphicx}
+
+% Setting Fira Code
+\usepackage{fontspec}
+\setmonofont[Contextuals={Alternate}]{Fira Code}
+
+% Minted Listing
+\usepackage{listings}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{listings, minted, skins}
+
+% Using tcblisting with minted as engine
+\tcbset{listing engine=minted}
+
+% Creating a python tcblisting
+\newtcblisting{pythonlst}{listing only,
+    minted language=python,
+    minted style=monokai, % Style
+    colback=bg, % Background color
+    enhanced,
+    frame hidden, % Hide borders frame
+    drop fuzzy shadow = gray, % Show fuzzy shadow,
+    listing remove caption=false,
+    %overlay={
+    %    \begin{tcbclipinterior}
+    %        \fill[bg] (frame.south west) rectangle %([xshift=4mm]frame.north west);
+    %    \end{tcbclipinterior}
+    %    },
+    minted options={
+        fontsize=\footnotesize, % Font size
+        tabsize=4, % Tab size
+        breaklines, % For breaklines
+        autogobble,
+        numbersep=2em, % Number sep to left <-
+        linenos} % Number count in line
+    }
+    
+% Creating a awk tcblisting
+\newtcblisting{awklst}{listing only,
+    minted language=awk,
+    minted style=monokai, % Style
+    colback=bg, % Background color
+    enhanced,
+    frame hidden, % Hide borders frame
+    drop fuzzy shadow = gray, % Show fuzzy shadow
+    minted options={
+        fontsize=\footnotesize, % Font size
+        tabsize=4, % Tab size
+        breaklines, % For breaklines
+        autogobble}
+    }
+% Colors
+\definecolor{inline}{RGB}{187,57,82}
+\definecolor{bg}{RGB}{22,43,58}
+\definecolor{bgmonokai}{RGB}{36,36,36}
+
+% Recolor hardcoded listing NumerLine
+%\renewcommand{\theFancyVerbLine}{\sffamily
+%    \textcolor[rgb]{0.5,0.5,1.0}{\scriptsize
+%        \oldstylenums{\arabic{FancyVerbLine}}}}
+
+%\setlength{\parindent}{0pt} % Set identation to zero.
+% that is a problem if u want paragraphts without identation. Workarround: \noindent
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Document
+\begin{document}
+
+% Titles
+\begin{titlepage}
+\centering
+\vspace{1cm}
+{\Large UNIVERSIDAD DIEGO PORTALES \par}
+\vspace{0.5cm}
+{\includegraphics[scale=0.5]{logo.png}\par}
+\vspace{0.5cm}
+{\scshape\Large FACULTAD DE INGENIERÍA Y CIENCIAS \par}
+
+\vspace{3cm}
+
+\hrule height 0.5pt
+\vspace{1mm}
+\hrule height 1.5pt
+\vspace{1cm}
+{\scshape\Huge Proyecto Semestral: Base de Datos \par}
+\vspace{1cm}
+\hrule height 1.5pt
+\vspace{1mm}
+\hrule height 0.5pt
+
+\vspace{3cm}
+
+\Large Estudiantes:\\ Benjamín Escandar \\ 
+
+\vfill \small \scshape aaaaaa \hfill 2023-2
+\end{titlepage}
+
+\clearpage
+
+\section*{Resumen}
+
+\end{document}
+
